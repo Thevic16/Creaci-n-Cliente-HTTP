@@ -15,34 +15,23 @@ import java.io.IOException;
 
 public class OperacionB extends Base{
 
-    private CloseableHttpResponse response;
+    private Document doc;
 
-    public OperacionB(CloseableHttpResponse response) {
-        this.response = response;
+    public OperacionB(Document doc) {
+        this.doc = doc;
     }
 
     @Override
     public void EjecutarOperacion() throws IOException {
-        String result = "";
-        HttpEntity entity = response.getEntity();
+        Elements paragraphs = doc.getElementsByTag("p");
 
-        if (entity != null) {
-            // return it as a String
-            result = EntityUtils.toString(entity);
-        }
-
-        Document doc = Jsoup.parse(result);
-
-        Element content = doc.getElementById("content");
-        Elements paragraphs = content.getElementsByTag("p");
-
+        // for para imprimir el texto contenido en los parrafos.
+        /*
         for (Element paragraph : paragraphs) {
             String Text = paragraph.text();
             System.out.println(Text);
         }
-
+        */
         System.out.println(paragraphs.size());
-
-
     }
 }
