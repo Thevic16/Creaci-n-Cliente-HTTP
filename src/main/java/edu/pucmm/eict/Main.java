@@ -1,9 +1,6 @@
 package edu.pucmm.eict;
 
-import edu.pucmm.eict.util.OperacionA;
-import edu.pucmm.eict.util.OperacionB;
-import edu.pucmm.eict.util.OperacionC;
-import edu.pucmm.eict.util.OperacionD;
+import edu.pucmm.eict.util.*;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
@@ -27,7 +24,10 @@ public class Main {
             //new OperacionC(doc).EjecutarOperacion();
 
             //Ejecutando operacion D.
-            new OperacionD(doc).EjecutarOperacion();
+            //new OperacionD(doc).EjecutarOperacion();
+
+            //Ejecutando operacion E.
+            new OperacionE(doc).EjecutarOperacion();
     }
 
 }

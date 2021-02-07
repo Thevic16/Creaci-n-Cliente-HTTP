@@ -1,16 +1,14 @@
-edu/pucmm/eict/util/OperacionE.java
- edu.pucmm.eict.util.OperacionE
+edu/pucmm/eict/util/OperacionA.java
+ edu.pucmm.eict.util.OperacionA
 edu/pucmm/eict/util/Base.java
  edu.pucmm.eict.util.Base
 edu/pucmm/eict/util/OperacionB.java
  edu.pucmm.eict.util.OperacionB
 edu/pucmm/eict/util/OperacionC.java
  edu.pucmm.eict.util.OperacionC
-edu/pucmm/eict/Wikipedia.java
- edu.pucmm.eict.Wikipedia
-edu/pucmm/eict/Main.java
- edu.pucmm.eict.Main
 edu/pucmm/eict/util/OperacionD.java
  edu.pucmm.eict.util.OperacionD
-edu/pucmm/eict/util/OperacionA.java
- edu.pucmm.eict.util.OperacionA
+edu/pucmm/eict/util/OperacionE.java
+ edu.pucmm.eict.util.OperacionE
+edu/pucmm/eict/Main.java
+ edu.pucmm.eict.Main
