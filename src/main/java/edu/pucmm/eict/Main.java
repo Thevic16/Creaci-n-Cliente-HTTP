@@ -21,14 +21,13 @@ public class Main {
             //new OperacionA(uri).EjecutarOperacion();
 
             //Ejecutando operacion B.
-            new OperacionB(doc).EjecutarOperacion();
+            //new OperacionB(doc).EjecutarOperacion();
 
             //Ejecutando operacion C.
-            //new OperacionC(response).EjecutarOperacion();
+            //new OperacionC(doc).EjecutarOperacion();
 
             //Ejecutando operacion D.
-            //new OperacionD(uri).EjecutarOperacion();
-
+            new OperacionD(doc).EjecutarOperacion();
     }
 
 }

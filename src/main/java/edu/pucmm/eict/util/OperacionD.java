@@ -13,10 +13,10 @@ import java.util.Locale;
 
 public class OperacionD extends Base{
 
-    private String uri;
+    private Document doc;
 
-    public OperacionD(String uri) {
-        this.uri = uri;
+    public OperacionD(Document doc) {
+        this.doc = doc;
     }
 
     @Override
@@ -25,12 +25,7 @@ public class OperacionD extends Base{
         int amountPost = 0;
         int contPrueba = 0;
 
-
-        Document doc = Jsoup.connect(uri).get();
-
-        System.out.println(doc.toString());
-
-        //Element content = doc.getElementById("content");
+        //System.out.println(doc.toString());
 
         Elements forms = doc.getElementsByTag("form");
 
@@ -45,9 +40,6 @@ public class OperacionD extends Base{
             }
             contPrueba = contPrueba +1;
         }
-
-
-
 
         System.out.println("Cantidad de form: "+(amountGet+amountPost));
         System.out.println("Cantidad de form que implementan el metodo GET: "+amountGet);
