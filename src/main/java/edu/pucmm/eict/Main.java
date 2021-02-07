@@ -22,7 +22,8 @@ public class Main {
 
         try {
 
-            HttpGet request = new HttpGet("https://www.pucmm.edu.do/webmail");
+            String uri = "https://avathartech.com/";
+            HttpGet request = new HttpGet(uri);
 
             CloseableHttpResponse response = httpClient.execute(request);
 
@@ -37,7 +38,7 @@ public class Main {
             //new OperacionC(response).EjecutarOperacion();
 
             //Ejecutando operacion D.
-            new OperacionD(response).EjecutarOperacion();
+            new OperacionD(uri).EjecutarOperacion();
 
 
             response.close();
