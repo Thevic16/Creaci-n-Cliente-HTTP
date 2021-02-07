@@ -2,11 +2,6 @@ package edu.pucmm.eict.util;
 
 // b) Indicar la cantidad de párrafos (p) que contiene el documento HTML.
 
-
-import org.apache.http.HttpEntity;
-import org.apache.http.client.methods.CloseableHttpResponse;
-import org.apache.http.util.EntityUtils;
-import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
