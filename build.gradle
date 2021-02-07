@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+}
+
+group 'edu.pucmm.eict'
+version '1.0-SNAPSHOT'
+
+/*
+mainClassName='edu.pucmm.eict.Main'
+ */
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+
+    // https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient
+    compile group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.4'
+
+    // https://mvnrepository.com/artifact/org.jsoup/jsoup
+    compile group: 'org.jsoup', name: 'jsoup', version: '1.13.1'
+}
+
+test {
+    useJUnitPlatform()
+}
