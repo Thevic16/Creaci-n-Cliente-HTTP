@@ -14,21 +14,38 @@ import java.io.IOException;
 
 public class OperacionA extends Base{
 
-    private CloseableHttpResponse response;
+    private String uri;
 
-    public OperacionA(CloseableHttpResponse response) {
-        this.response = response;
+    public OperacionA(String uri) {
+        this.uri = uri;
     }
 
     @Override
     public void EjecutarOperacion() throws IOException {
 
-        HttpEntity entity = response.getEntity();
-        if (entity != null) {
-            // return it as a String
-            String result = EntityUtils.toString(entity);
-            System.out.println("La cantidad de lineas del recurso retornado es: "+ countLines(result));
-            //System.out.println(result);
+
+        CloseableHttpClient httpClient = HttpClients.createDefault();
+
+        try {
+
+            HttpGet request = new HttpGet(uri);
+
+            CloseableHttpResponse response = httpClient.execute(request);
+
+
+            HttpEntity entity = response.getEntity();
+            if (entity != null) {
+                // return it as a String
+                String result = EntityUtils.toString(entity);
+                System.out.println("La cantidad de lineas del recurso retornado es: "+ countLines(result));
+                //System.out.println(result);
+            }
+
+
+            response.close();
+
+        } finally {
+            httpClient.close();
         }
 
     }
