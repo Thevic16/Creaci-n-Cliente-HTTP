@@ -3,9 +3,6 @@ package edu.pucmm.eict.util;
 //e) Para cada formulario mostrar los campos del tipo input y su
 //respectivo tipo que contiene en el documento HTML.
 
-import org.apache.http.HttpEntity;
-import org.apache.http.client.methods.CloseableHttpResponse;
-import org.apache.http.util.EntityUtils;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -16,30 +13,26 @@ import java.util.Locale;
 
 public class OperacionE extends Base{
 
-    private CloseableHttpResponse response;
+    private String uri;
 
-    public OperacionE(CloseableHttpResponse response) {
-        this.response = response;
+    public OperacionE(String uri) {
+        this.uri = uri;
     }
 
     @Override
     public void EjecutarOperacion() throws IOException {
-        String result = "";
         int amountGet = 0;
         int amountPost = 0;
         int contPrueba = 0;
-        HttpEntity entity = response.getEntity();
 
-        if (entity != null) {
-            // return it as a String
-            result = EntityUtils.toString(entity);
-        }
 
-        Document doc = Jsoup.parse(result);
+        Document doc = Jsoup.connect(uri).get();
 
-        Element content = doc.getElementById("content");
+        System.out.println(doc.toString());
 
-        Elements forms = content.getElementsByTag("form");
+        //Element content = doc.getElementById("content");
+
+        Elements forms = doc.getElementsByTag("form");
 
         for (Element form : forms) {
 
@@ -52,6 +45,8 @@ public class OperacionE extends Base{
             }
             contPrueba = contPrueba +1;
         }
+
+
 
 
         System.out.println("Cantidad de form: "+(amountGet+amountPost));
