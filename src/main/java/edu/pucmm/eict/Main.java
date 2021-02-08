@@ -4,18 +4,27 @@ import edu.pucmm.eict.util.*;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args)  {
 
             try {
-                String url = "https://en.wikipedia.org/wiki/History_of_Wikipedia";
+                //String url = "https://en.wikipedia.org/wiki/History_of_Wikipedia";
                 //String url = args[0];
+
+                Scanner input = new Scanner(System.in);  // Create a Scanner object
+                System.out.println("Entre la url:");
+
+                String url = input.nextLine();  // Read user input
+
+                input.close();
 
                 Document doc = Jsoup.connect(url).get();
 
                 //Ejecutando operacion A.
-                //new OperacionA(url).EjecutarOperacion();
+                new OperacionA(url).EjecutarOperacion();
 
                 //Ejecutando operacion B.
                 //new OperacionB(doc).EjecutarOperacion();
