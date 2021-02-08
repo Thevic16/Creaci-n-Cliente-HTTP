@@ -36,6 +36,7 @@ public class OperacionF extends Base{
         for (Element form : forms) {
             if(form.attr("method").toLowerCase(Locale.ROOT).equals("post")){
                 isPost = true;
+                url = form.attr("action");
             }
         }
 

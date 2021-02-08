@@ -5,6 +5,8 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
 import java.util.Scanner;
+import java.net.URL;
+
 
 public class Main {
 
@@ -21,30 +23,54 @@ public class Main {
 
                 input.close();
 
+                switch(isValid(url)) {
+                    case 1:
+                        //Ejecutando operacion A.
+                        new OperacionA(url).EjecutarOperacion();
+
+                        //Ejecutando operacion B.
+                        //new OperacionB(doc).EjecutarOperacion();
+
+                        //Ejecutando operacion C.
+                        //new OperacionC(doc).EjecutarOperacion();
+
+                        //Ejecutando operacion D.
+                        //new OperacionD(doc).EjecutarOperacion();
+
+                        //Ejecutando operacion E.
+                        //new OperacionE(doc).EjecutarOperacion();
+
+                        //Ejecutando operacion F.
+                        //new OperacionF(doc,url).EjecutarOperacion();
+                        break;
+
+                    case 0:
+                        System.out.println("La url ingresada no es valida.");
+                        break;
+                }
+
                 Document doc = Jsoup.connect(url).get();
-
-                //Ejecutando operacion A.
-                //new OperacionA(url).EjecutarOperacion();
-
-                //Ejecutando operacion B.
-                //new OperacionB(doc).EjecutarOperacion();
-
-                //Ejecutando operacion C.
-                //new OperacionC(doc).EjecutarOperacion();
-
-                //Ejecutando operacion D.
-                new OperacionD(doc).EjecutarOperacion();
-
-                //Ejecutando operacion E.
-                //new OperacionE(doc).EjecutarOperacion();
-
-                //Ejecutando operacion F.
-                //new OperacionF(doc,url).EjecutarOperacion();
 
             } catch (Exception e){
                 System.out.println(e);
                 System.out.println("Algo salio mal....");
             }
+    }
+
+    /* Returns true if url is valid */
+    public static int isValid(String url)
+    {
+        /* Try creating a valid URL */
+        try {
+            new URL(url).toURI();
+            return 1;
+        }
+
+        // If there was an Exception
+        // while creating URL object
+        catch (Exception e) {
+            return 0;
+        }
     }
 
 }

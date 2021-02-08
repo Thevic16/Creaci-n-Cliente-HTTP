@@ -35,7 +35,7 @@ public class OperacionE extends Base{
                 System.out.println("  Tipo="+input.attr("type"));
                 contInput = contInput +1;
             }
-            contInput = 0;
+            contInput = 1;
             contForm = contForm +1;
             System.out.println(" ");
         }
