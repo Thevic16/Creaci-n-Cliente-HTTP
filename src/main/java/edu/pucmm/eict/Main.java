@@ -9,11 +9,11 @@ public class Main {
     public static void main(String[] args)  {
 
             try {
-                String uri = "https://avathartech.com/";
-                Document doc = Jsoup.connect(uri).get();
+                String url = "https://en.wikipedia.org/wiki/History_of_Wikipedia";
+                Document doc = Jsoup.connect(url).get();
 
                 //Ejecutando operacion A.
-                //new OperacionA(uri).EjecutarOperacion();
+                //new OperacionA(url).EjecutarOperacion();
 
                 //Ejecutando operacion B.
                 //new OperacionB(doc).EjecutarOperacion();
@@ -25,13 +25,15 @@ public class Main {
                 //new OperacionD(doc).EjecutarOperacion();
 
                 //Ejecutando operacion E.
-                new OperacionE(doc).EjecutarOperacion();
+                //new OperacionE(doc).EjecutarOperacion();
+
+                //Ejecutando operacion F.
+                new OperacionF(doc,url).EjecutarOperacion();
 
             } catch (Exception e){
                 System.out.println(e);
                 System.out.println("Algo salio mal....");
             }
-
     }
 
 }
