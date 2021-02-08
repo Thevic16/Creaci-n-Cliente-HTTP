@@ -24,7 +24,7 @@ public class Main {
                 Document doc = Jsoup.connect(url).get();
 
                 //Ejecutando operacion A.
-                new OperacionA(url).EjecutarOperacion();
+                //new OperacionA(url).EjecutarOperacion();
 
                 //Ejecutando operacion B.
                 //new OperacionB(doc).EjecutarOperacion();
@@ -33,7 +33,7 @@ public class Main {
                 //new OperacionC(doc).EjecutarOperacion();
 
                 //Ejecutando operacion D.
-                //new OperacionD(doc).EjecutarOperacion();
+                new OperacionD(doc).EjecutarOperacion();
 
                 //Ejecutando operacion E.
                 //new OperacionE(doc).EjecutarOperacion();

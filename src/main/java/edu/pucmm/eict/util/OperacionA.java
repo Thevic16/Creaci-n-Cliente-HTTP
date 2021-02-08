@@ -37,10 +37,9 @@ public class OperacionA extends Base{
             if (entity != null) {
                 // return it as a String
                 String result = EntityUtils.toString(entity);
-                System.out.println("La cantidad de lineas del recurso retornado es: "+ countLines(result));
+                System.out.println("Cantidad de lineas del recurso retornado es: "+ countLines(result));
                 //System.out.println(result);
             }
-
 
             response.close();
 

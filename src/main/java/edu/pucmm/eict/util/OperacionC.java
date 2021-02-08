@@ -28,6 +28,7 @@ public class OperacionC extends Base{
             amountImg = amountImg + paragraphImages.size();
         }
 
-        System.out.println(amountImg);
+        System.out.println("cantidad de imágenes (img) dentro de los párrafos que\n" +
+                "contiene el archivo HTML:"+amountImg);
     }
 }

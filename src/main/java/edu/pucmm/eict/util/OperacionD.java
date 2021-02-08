@@ -23,10 +23,8 @@ public class OperacionD extends Base{
     public void EjecutarOperacion() throws IOException {
         int amountGet = 0;
         int amountPost = 0;
-        int contPrueba = 0;
 
         //System.out.println(doc.toString());
-
         Elements forms = doc.getElementsByTag("form");
 
         for (Element form : forms) {
@@ -38,13 +36,11 @@ public class OperacionD extends Base{
             if(form.attr("method").toLowerCase(Locale.ROOT).equals("post")){
                 amountPost = amountPost +1;
             }
-            contPrueba = contPrueba +1;
         }
 
-        System.out.println("Cantidad de form: "+(amountGet+amountPost));
-        System.out.println("Cantidad de form que implementan el metodo GET: "+amountGet);
-        System.out.println("Cantidad de form que implementan el metodo POST: "+amountPost);
-        System.out.println(contPrueba);
+        System.out.println("Cantidad de formularios: "+(amountGet+amountPost));
+        System.out.println("Cantidad de formularios que implementan el metodo GET: "+amountGet);
+        System.out.println("Cantidad de formularios que implementan el metodo POST: "+amountPost);
     }
 }
 

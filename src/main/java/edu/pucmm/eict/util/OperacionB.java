@@ -27,6 +27,6 @@ public class OperacionB extends Base{
             System.out.println(Text);
         }
         */
-        System.out.println(paragraphs.size());
+        System.out.println("Cantidad de párrafos (p) que contiene el documento HTML:"+paragraphs.size());
     }
 }
