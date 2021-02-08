@@ -43,7 +43,7 @@ public class OperacionF extends Base{
             Document doc1 = Jsoup.connect(url)
                     .data("asignatura", "practica1")
                     .header("matricula","20171408")
-                    .get();
+                    .post();
 
             System.out.println("Respuesta del servidor: "+doc1.toString());
         }

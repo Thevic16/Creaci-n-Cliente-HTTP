@@ -10,6 +10,8 @@ public class Main {
 
             try {
                 String url = "https://en.wikipedia.org/wiki/History_of_Wikipedia";
+                //String url = args[0];
+
                 Document doc = Jsoup.connect(url).get();
 
                 //Ejecutando operacion A.
@@ -28,7 +30,7 @@ public class Main {
                 //new OperacionE(doc).EjecutarOperacion();
 
                 //Ejecutando operacion F.
-                new OperacionF(doc,url).EjecutarOperacion();
+                //new OperacionF(doc,url).EjecutarOperacion();
 
             } catch (Exception e){
                 System.out.println(e);
