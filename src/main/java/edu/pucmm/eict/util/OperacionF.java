@@ -17,11 +17,10 @@ import java.util.Locale;
 public class OperacionF extends Base{
 
     private Document doc;
-    private String url;
+    //private String url;
 
-    public OperacionF(Document doc,String url) {
+    public OperacionF(Document doc) {
         this.doc = doc;
-        this.url =url;
     }
 
     @Override
@@ -36,19 +35,17 @@ public class OperacionF extends Base{
         for (Element form : forms) {
             if(form.attr("method").toLowerCase(Locale.ROOT).equals("post")){
                 isPost = true;
-                url = form.attr("action");
+
+                Document doc1 = Jsoup.connect(form.absUrl("action"))
+                        .data("asignatura", "practica1")
+                        .header("matricula","20171408")
+                        .post();
+
+                System.out.println("Respuesta del servidor: "+doc1.toString());
             }
         }
 
-        if(isPost){
-            Document doc1 = Jsoup.connect(url)
-                    .data("asignatura", "practica1")
-                    .header("matricula","20171408")
-                    .post();
-
-            System.out.println("Respuesta del servidor: "+doc1.toString());
-        }
-        else {
+        if(!isPost){
             System.out.println("No se encontro ningun formulario con el metodo de envio POST.");
         }
 

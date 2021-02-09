@@ -20,36 +20,36 @@ public class Main {
                 System.out.println("Entre la url:");
 
                 String url = input.nextLine();  // Read user input
+                Document doc = Jsoup.connect(url).get();
 
                 input.close();
 
                 switch(isValid(url)) {
                     case 1:
                         //Ejecutando operacion A.
-                        new OperacionA(url).EjecutarOperacion();
+                        //new OperacionA(url).EjecutarOperacion();
 
                         //Ejecutando operacion B.
-                        //new OperacionB(doc).EjecutarOperacion();
+                        new OperacionB(doc).EjecutarOperacion();
 
                         //Ejecutando operacion C.
-                        //new OperacionC(doc).EjecutarOperacion();
+                        new OperacionC(doc).EjecutarOperacion();
 
                         //Ejecutando operacion D.
-                        //new OperacionD(doc).EjecutarOperacion();
+                        new OperacionD(doc).EjecutarOperacion();
 
                         //Ejecutando operacion E.
-                        //new OperacionE(doc).EjecutarOperacion();
+                        new OperacionE(doc).EjecutarOperacion();
 
                         //Ejecutando operacion F.
-                        //new OperacionF(doc,url).EjecutarOperacion();
+                        //new OperacionF(doc).EjecutarOperacion();
+
                         break;
 
                     case 0:
                         System.out.println("La url ingresada no es valida.");
                         break;
                 }
-
-                Document doc = Jsoup.connect(url).get();
 
             } catch (Exception e){
                 System.out.println(e);
