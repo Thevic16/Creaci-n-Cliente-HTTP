@@ -1,5 +1,5 @@
-edu/pucmm/eict/util/OperacionE.java
- edu.pucmm.eict.util.OperacionE
+edu/pucmm/eict/util/OperacionF.java
+ edu.pucmm.eict.util.OperacionF
 edu/pucmm/eict/util/Base.java
  edu.pucmm.eict.util.Base
 edu/pucmm/eict/util/OperacionD.java
@@ -10,7 +10,7 @@ edu/pucmm/eict/util/OperacionC.java
  edu.pucmm.eict.util.OperacionC
 edu/pucmm/eict/util/OperacionA.java
  edu.pucmm.eict.util.OperacionA
-edu/pucmm/eict/util/OperacionF.java
- edu.pucmm.eict.util.OperacionF
+edu/pucmm/eict/util/OperacionE.java
+ edu.pucmm.eict.util.OperacionE
 edu/pucmm/eict/Main.java
  edu.pucmm.eict.Main

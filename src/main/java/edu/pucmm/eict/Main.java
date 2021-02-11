@@ -24,25 +24,25 @@ public class Main {
 
                 input.close();
 
-                switch(isValid(url)) {
+                switch(isValid(url)) { //Verificar esto ya que no esta funcionando adecuadamente.
                     case 1:
                         //Ejecutando operacion A.
                         //new OperacionA(url).EjecutarOperacion();
 
                         //Ejecutando operacion B.
-                        new OperacionB(doc).EjecutarOperacion();
+                        //new OperacionB(doc).EjecutarOperacion();
 
                         //Ejecutando operacion C.
-                        new OperacionC(doc).EjecutarOperacion();
+                        //new OperacionC(doc).EjecutarOperacion();
 
                         //Ejecutando operacion D.
-                        new OperacionD(doc).EjecutarOperacion();
+                        //new OperacionD(doc).EjecutarOperacion();
 
                         //Ejecutando operacion E.
-                        new OperacionE(doc).EjecutarOperacion();
+                        //new OperacionE(doc).EjecutarOperacion();
 
                         //Ejecutando operacion F.
-                        //new OperacionF(doc).EjecutarOperacion();
+                        new OperacionF(doc).EjecutarOperacion();
 
                         break;
 
