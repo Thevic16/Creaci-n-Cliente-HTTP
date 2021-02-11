@@ -56,7 +56,7 @@ public class Main {
                         break;
 
                     case 0:
-                        System.out.println("La url ingresada no es valida.");
+                        System.out.println("A partir de la url ingresada no se ha podido recibir un mensaje.");
                         break;
                 }
 
