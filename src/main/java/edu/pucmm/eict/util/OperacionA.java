@@ -3,7 +3,6 @@ package edu.pucmm.eict.util;
 // a) Indicar la cantidad de lineas del recurso retornado.
 
 import org.apache.http.HttpEntity;
-import org.apache.http.HttpHeaders;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
@@ -35,7 +34,6 @@ public class OperacionA extends Base{
 
             HttpEntity entity = response.getEntity();
             if (entity != null) {
-                // return it as a String
                 String result = EntityUtils.toString(entity);
                 System.out.println("Cantidad de lineas del recurso retornado es: "+ countLines(result));
                 //System.out.println(result);

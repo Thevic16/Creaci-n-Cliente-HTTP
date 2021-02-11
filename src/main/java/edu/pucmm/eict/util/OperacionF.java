@@ -17,7 +17,6 @@ import java.util.Locale;
 public class OperacionF extends Base{
 
     private Document doc;
-    //private String url;
 
     public OperacionF(Document doc) {
         this.doc = doc;
@@ -46,7 +45,7 @@ public class OperacionF extends Base{
         }
 
         if(!isPost){
-            System.out.println("No se encontro ningun formulario con el metodo de envio POST.");
+            System.out.println("No se encontro ningun formulario con el método de envio POST.");
         }
 
     }

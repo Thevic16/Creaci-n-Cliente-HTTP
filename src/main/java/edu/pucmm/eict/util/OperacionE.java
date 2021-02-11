@@ -29,9 +29,9 @@ public class OperacionE extends Base{
 
         for (Element form : forms) {
             Elements inputs = form.getElementsByTag("input");
-            System.out.println("Formulario numero "+contForm);
+            System.out.println("Formulario número "+contForm);
             for (Element input: inputs) {
-                System.out.println(" Input numero "+contInput);
+                System.out.println(" Input número "+contInput);
                 System.out.println("  "+"Nombre="+input.attr("name") +" "+  "Tipo="+input.attr("type"));
                 contInput = contInput +1;
             }

@@ -39,8 +39,8 @@ public class OperacionD extends Base{
         }
 
         System.out.println("Cantidad de formularios: "+(amountGet+amountPost));
-        System.out.println("Cantidad de formularios que implementan el metodo GET: "+amountGet);
-        System.out.println("Cantidad de formularios que implementan el metodo POST: "+amountPost);
+        System.out.println("Cantidad de formularios que implementan el método GET: "+amountGet);
+        System.out.println("Cantidad de formularios que implementan el método POST: "+amountPost);
     }
 }
 
