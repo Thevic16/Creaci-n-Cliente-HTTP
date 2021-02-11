@@ -57,6 +57,6 @@ public class OperacionA extends Base{
             char letter = str.charAt(i);
             if (letter ==  '\n') ++count;
         }
-        return count;
+        return count+1;
     }
 }

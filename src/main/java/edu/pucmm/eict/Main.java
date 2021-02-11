@@ -3,9 +3,8 @@ package edu.pucmm.eict;
 import edu.pucmm.eict.util.*;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
-
 import java.util.Scanner;
-import java.net.URL;
+
 
 
 public class Main {
@@ -13,34 +12,44 @@ public class Main {
     public static void main(String[] args)  {
 
             try {
-                //String url = "https://en.wikipedia.org/wiki/History_of_Wikipedia";
-                //String url = args[0];
-
+                Document doc = null;
+                int urlValida = 1;
                 Scanner input = new Scanner(System.in);  // Create a Scanner object
                 System.out.println("Entre la url:");
 
                 String url = input.nextLine();  // Read user input
-                Document doc = Jsoup.connect(url).get();
-
                 input.close();
 
-                switch(isValid(url)) { //Verificar esto ya que no esta funcionando adecuadamente.
+                try{
+                     doc = Jsoup.connect(url).get();
+                }catch (Exception e){
+                    urlValida = 0;
+                }
+
+                switch(urlValida) { //Verificar esto ya que no esta funcionando adecuadamente.
                     case 1:
+                        System.out.println(" ");
+                        System.out.println("/////////////////////OPERACIÓN (A)////////////////////////");
                         //Ejecutando operacion A.
-                        //new OperacionA(url).EjecutarOperacion();
+                        new OperacionA(url).EjecutarOperacion();
 
+                        System.out.println("/////////////////////OPERACIÓN (B)////////////////////////");
                         //Ejecutando operacion B.
-                        //new OperacionB(doc).EjecutarOperacion();
+                        new OperacionB(doc).EjecutarOperacion();
 
+                        System.out.println("/////////////////////OPERACIÓN (C)////////////////////////");
                         //Ejecutando operacion C.
-                        //new OperacionC(doc).EjecutarOperacion();
+                        new OperacionC(doc).EjecutarOperacion();
 
+                        System.out.println("/////////////////////OPERACIÓN (D)////////////////////////");
                         //Ejecutando operacion D.
-                        //new OperacionD(doc).EjecutarOperacion();
+                        new OperacionD(doc).EjecutarOperacion();
 
+                        System.out.println("/////////////////////OPERACIÓN (E)////////////////////////");
                         //Ejecutando operacion E.
-                        //new OperacionE(doc).EjecutarOperacion();
+                        new OperacionE(doc).EjecutarOperacion();
 
+                        System.out.println("/////////////////////OPERACIÓN (F)////////////////////////");
                         //Ejecutando operacion F.
                         new OperacionF(doc).EjecutarOperacion();
 
@@ -56,21 +65,4 @@ public class Main {
                 System.out.println("Algo salio mal....");
             }
     }
-
-    /* Returns true if url is valid */
-    public static int isValid(String url)
-    {
-        /* Try creating a valid URL */
-        try {
-            new URL(url).toURI();
-            return 1;
-        }
-
-        // If there was an Exception
-        // while creating URL object
-        catch (Exception e) {
-            return 0;
-        }
-    }
-
 }
