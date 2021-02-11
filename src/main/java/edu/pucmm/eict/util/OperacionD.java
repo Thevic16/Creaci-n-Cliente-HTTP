@@ -37,7 +37,8 @@ public class OperacionD extends Base{
                 amountPost = amountPost +1;
             }
         }
-
+        System.out.println("cantidad de formularios (form) que contiene el HTML por\n" +
+                "categorizando por el método implementado POST o GET.");
         System.out.println("Cantidad de formularios: "+(amountGet+amountPost));
         System.out.println("Cantidad de formularios que implementan el método GET: "+amountGet);
         System.out.println("Cantidad de formularios que implementan el método POST: "+amountPost);

@@ -26,7 +26,7 @@ public class OperacionE extends Base{
         //System.out.println(doc.toString());
 
         Elements forms = doc.getElementsByTag("form");
-
+        System.out.println("Para cada formulario mostrar los campos del tipo input y su respectivo tipo que contiene en el documento HTML.");
         for (Element form : forms) {
             Elements inputs = form.getElementsByTag("input");
             System.out.println("Formulario número "+contForm);

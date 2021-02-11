@@ -40,7 +40,8 @@ public class OperacionF extends Base{
                         .header("matricula","20171408")
                         .post();
 
-                System.out.println("Respuesta del servidor: "+doc1.toString());
+                System.out.println("Respuesta del servidor: ");
+                System.out.println(doc1.toString());
             }
         }
 
