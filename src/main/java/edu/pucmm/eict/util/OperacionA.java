@@ -49,12 +49,12 @@ public class OperacionA extends Base{
 
 
     public static int countLines(String str) {
-        int count = 0;
-        int total = str.length();
-        for (int i = 0; i < total; ++i) {
-            char letter = str.charAt(i);
-            if (letter ==  '\n') ++count;
+        int c = 0;
+        int t = str.length();
+        for (int i = 0; i < t; ++i) {
+            char l = str.charAt(i);
+            if (l ==  '\n') ++c;
         }
-        return count+1;
+        return c+1;
     }
 }

@@ -3,13 +3,13 @@ package edu.pucmm.eict.util;
 //e) Para cada formulario mostrar los campos del tipo input y su
 //respectivo tipo que contiene en el documento HTML.
 
-import org.jsoup.Jsoup;
+
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.io.IOException;
-import java.util.Locale;
+
 
 public class OperacionE extends Base{
 
